@@ -38,7 +38,6 @@ jobs:
     - name: Análisis estático
       run: mvn checkstyle:check
       continue-on-error: true  # No falla el pipeline si hay warnings
-
 ##se comentarian estas lineas de CD para hacerlo con Jenkins file de acuerdo al taller DevOps
 #Guia actividad U2 actividad 3 
 #    # 5. Login Docker Hub

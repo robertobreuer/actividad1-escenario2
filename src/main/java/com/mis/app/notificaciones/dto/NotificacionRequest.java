@@ -8,10 +8,14 @@ import lombok.Data;
  */
 @Data
 public class NotificacionRequest {
-    
+
+    /** Nombre de la plataforma destino. */
     private String plataforma;
+    /** Tipo de notificación. */
     private TipoNotificacion tipo;
+    /** Título de la notificación. */
     private String titulo;
+    /** Mensaje de la notificación. */
     private String mensaje;
-    
+
 }

@@ -10,27 +10,30 @@ import lombok.RequiredArgsConstructor;
 
 /**
  * Controlador REST para gestionar notificaciones.
- * Utiliza el patrón Bridge para enviar notificaciones a diferentes plataformas.
+ * Utiliza el patrón Bridge para enviar notificaciones a diferentes
+ * plataformas.
  */
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/notificaciones")
 public class NotificacionController {
 
+    /** Servicio de notificaciones. */
     private final NotificacionService notificacionService;
 
     /**
      * Envía una notificación a una plataforma específica.
-     * 
+     *
      * @param request datos de la notificación a enviar
      * @return resultado del envío
      */
     @PostMapping("/")
-    public String enviarNotificacion(@RequestBody NotificacionRequest request) {
+    public String enviarNotificacion(
+            @RequestBody final NotificacionRequest request) {
         return notificacionService.enviarNotificacion(
-            request.getPlataforma(), 
-            request.getTipo(), 
-            request.getTitulo(), 
+            request.getPlataforma(),
+            request.getTipo(),
+            request.getTitulo(),
             request.getMensaje()
         );
     }

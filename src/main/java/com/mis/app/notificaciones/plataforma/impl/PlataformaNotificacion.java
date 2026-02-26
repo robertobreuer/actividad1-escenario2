@@ -7,10 +7,11 @@ import com.mis.app.notificaciones.enums.TipoNotificacion;
  * Permite mostrar notificaciones con diferentes tipos y contenido.
  */
 public interface PlataformaNotificacion {
-	
+
     /**
-     * Muestra una notificación con el título, mensaje y tipo especificados.
-     * 
+     * Muestra una notificación con el título, mensaje y tipo
+     * especificados.
+     *
      * @param titulo el título de la notificación
      * @param mensaje el contenido del mensaje a mostrar
      * @param tipo el tipo de notificación a mostrar

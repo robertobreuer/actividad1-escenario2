@@ -5,32 +5,31 @@ package com.mis.app.notificaciones.enums;
  * Cada tipo tiene una descripción asociada para su identificación.
  */
 public enum TipoNotificacion {
-	
-    /** Notificación de tipo mensaje informativo */
+
+    /** Notificación de tipo mensaje informativo. */
     MENSAJE("Mensaje"),
-    /** Notificación de tipo alerta crítica */
-    ALERTA("Alerta"), 
-    /** Notificación de tipo advertencia */
+    /** Notificación de tipo alerta crítica. */
+    ALERTA("Alerta"),
+    /** Notificación de tipo advertencia. */
     ADVERTENCIA("Advertencia"),
-    /** Notificación de tipo confirmación */
-    CONFIRMACION("Confirmación"),
-    ;
-    
-    /** Descripción textual del tipo de notificación */
+    /** Notificación de tipo confirmación. */
+    CONFIRMACION("Confirmación");
+
+    /** Descripción textual del tipo de notificación. */
     private final String descripcion;
-    
+
     /**
      * Constructor del enum.
-     * 
+     *
      * @param descripcion la descripción del tipo de notificación
      */
-    TipoNotificacion(String descripcion) {
+    TipoNotificacion(final String descripcion) {
         this.descripcion = descripcion;
     }
-    
+
     /**
      * Obtiene la descripción del tipo de notificación.
-     * 
+     *
      * @return la descripción del tipo
      */
     public String getDescripcion() {
