@@ -242,5 +242,47 @@ Respuesta:
 ```
 
 
+#2026-02-25 Taller DevOps
+# Laboratorio CI/CD - Aplicación Notificaciones
+
+## Objetivo
+Configurar pipelines CI/CD para aplicación Java/Spring Boot con despliegue Kubernetes.
+
+## Pipeline CI (GitHub Actions)
+**Archivo**: `.github/workflows/ci.yml`
+
+**Triggers**: push/PR a `main`
+
+**Etapas**:
+- ✅ Checkout código
+- ✅ Setup Java 17  
+- ✅ **Ejecución de pruebas** (`mvn test`)
+- ✅ Build Maven (`mvn clean package`)
+- ✅ **Análisis estático** (`mvn checkstyle:check`)
+
+## Pipeline CD (Jenkins)
+**Archivo**: `Jenkinsfile`
+
+**Stages**:
+1. Clonar repositorio
+2. Build Maven  
+3. Construir imagen Docker
+4. Publicar imagen DockerHub
+
+## Arquitectura del flujo CI/CD
+
+```mermaid
+graph TD
+    A[Git Push/PR] --> B[GitHub Actions CI]
+    B --> C[mvn test]
+    C -->|OK| D[mvn package]
+    D -->|OK| E[Análisis estático]
+    E --> F[Jenkins CD]
+    F --> G[Docker build]
+    G --> H[Docker push]
+    H --> I[Kubernetes Deploy]
+```
+
+
 
 
