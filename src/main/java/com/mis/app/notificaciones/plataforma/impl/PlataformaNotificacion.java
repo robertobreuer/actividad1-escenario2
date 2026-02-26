@@ -19,3 +19,4 @@ public interface PlataformaNotificacion {
      */
     String mostrar(String titulo, String mensaje, TipoNotificacion tipo);
 }
+

@@ -19,3 +19,4 @@ public class NotificacionRequest {
     private String mensaje;
 
 }
+

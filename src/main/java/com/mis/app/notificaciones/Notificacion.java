@@ -21,13 +21,13 @@ public class Notificacion {
     /**
      * Constructor que inicializa una notificación con plataforma y tipo.
      *
-     * @param plataforma la plataforma donde se mostrará la notificación
-     * @param tipo el tipo de notificación
+     * @param plat la plataforma donde se mostrará la notificación
+     * @param tipoNotif el tipo de notificación
      */
-    public Notificacion(final PlataformaNotificacion plataforma,
-            final TipoNotificacion tipo) {
-        this.plataforma = plataforma;
-        this.tipo = tipo;
+    public Notificacion(final PlataformaNotificacion plat,
+            final TipoNotificacion tipoNotif) {
+        this.plataforma = plat;
+        this.tipo = tipoNotif;
     }
 
     /**
@@ -42,3 +42,4 @@ public class Notificacion {
     }
 
 }
+

@@ -21,10 +21,10 @@ public enum TipoNotificacion {
     /**
      * Constructor del enum.
      *
-     * @param descripcion la descripción del tipo de notificación
+     * @param desc la descripción del tipo de notificación
      */
-    TipoNotificacion(final String descripcion) {
-        this.descripcion = descripcion;
+    TipoNotificacion(final String desc) {
+        this.descripcion = desc;
     }
 
     /**
