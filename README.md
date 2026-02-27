@@ -1,51 +1,4 @@
-
-### Actividad 1 Escenario 2
-Estás desarrollando una aplicación que gestiona la visualización de notificaciones en diferentes plataformas (por ejemplo: escritorio, móvil, web). Las notificaciones pueden ser de distintos tipos (mensaje, alerta, advertencia, confirmación) y cada tipo puede mostrarse de distintas formas según la plataforma.
-
-**Problema** Si usas herencia tradicional, tendrías que crear clases como:
-
-● NotificacionMensajeWeb, NotificacionAlertaWeb, NotificacionMensajeMovil, NotificacionAlertaMovil, etc.
-
-Esto lleva rápidamente a una explosión combinatoria de subclases difíciles de mantener.
-
-**Guía de actividad**
-Beneficios esperados de la solución:
-
-● Separación de responsabilidades: Separar la lógica de la notificación del medio por el
-que se presenta.
-
-● Escalabilidad: Poder agregar nuevas plataformas o tipos de notificación sin modificar
-el resto del sistema.
-
-● Reducción de clases: Evitar la multiplicación de clases para cada combinación.
-
-● Flexibilidad en tiempo de ejecución: Poder cambiar la plataforma dinámicamente si
-es necesario.
-
 # Solución
-## 📋 Análisis del Patrón
-
-### 🔍 Identificación del Tipo de Patrón
-
-**Tipo**: **ESTRUCTURAL**
-
-Los patrones estructurales se encargan de cómo las clases y objetos se componen para formar estructuras más grandes, facilitando el diseño al identificar relaciones simples entre entidades.
-
-### 🎯 Selección del Patrón
-
-**Patrón Seleccionado**: **BRIDGE (Puente)**
-
-#### Justificación:
-- **Problema**: Evitar la explosión combinatoria de clases 
-- **Solución**: Separar la abstracción (Notificación) de su implementación (Plataforma)
-- **Beneficio**: Permite que ambas jerarquías evolucionen independientemente
-
-#### Características del Bridge Pattern:
-- ✅ **Abstracción**: `Notificacion` - Define la interfaz de alto nivel
-- ✅ **Implementador**: `PlataformaNotificacion` - Interfaz para implementaciones
-- ✅ **Implementaciones Concretas**: `PlataformaWeb`, `PlataformaMovil`, `PlataformaEscritorio`
-- ✅ **Separación**: Dos jerarquías independientes (tipos vs plataformas)
-
 ### 🎨 Diagrama de Clases de la Solución
 
 ```mermaid
@@ -242,7 +195,7 @@ Respuesta:
 ```
 
 
-#2026-02-25 Taller DevOps
+# 2026-02-25 Taller DevOps
 # Laboratorio CI/CD - Aplicación Notificaciones
 
 ## Objetivo
@@ -251,7 +204,7 @@ Configurar pipelines CI/CD para aplicación Java/Spring Boot con despliegue Kube
 ## Pipeline CI (GitHub Actions)
 **Archivo**: `.github/workflows/ci.yml`
 
-**Triggers**: push/PR a `main`
+**Triggers**: push/PR a `master`
 
 **Etapas**:
 - ✅ Checkout código
